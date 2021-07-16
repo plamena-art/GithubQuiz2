@@ -1,5 +1,7 @@
 package com.goanna;
 
+import java.util.ArrayList;
+
 public class Employee {
     int id;
     String name;
@@ -9,6 +11,10 @@ public class Employee {
         this.id = id;
         this.name = name;
         this.age = age;
+    }
+
+    public static boolean over60(ArrayList<Integer> emptyList) {
+        return false;
     }
 
     public int getId() {

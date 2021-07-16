@@ -13,7 +13,6 @@ public class Lists {
         Employee emp4 = new Employee(4, "Mohit", 36);
         Employee emp5 = new Employee(5, "Swaraj", 60);
 
-
         List<Employee> empList = new ArrayList<>(10);
 
         empList.add(emp1);
@@ -21,23 +20,11 @@ public class Lists {
         empList.add(emp3);
         empList.add(emp4);
         empList.add(emp5);
-       
 
-
-        
         over60(empList);
-
-
-
         removeById(empList, 4);
-        
-        
-        
         ageModulus(empList);
-
-
     }
-
 
     /**
      * This Will loop through the list and print out every employee with age greater than 60
@@ -46,7 +33,7 @@ public class Lists {
      *
      *
      */
-    private static Employee over60(List<Employee> empList) {
+    public static Employee over60(List<Employee> empList) {
     	Employee adult = null;
         for(int i = 0; i < empList.size(); i++){
             if(empList.get(i).age > 60){
@@ -54,9 +41,7 @@ public class Lists {
             }
         }
         return adult;
-
     }
-
 
     /**
      * This will remove element based on i
@@ -66,7 +51,7 @@ public class Lists {
      * @param empId
      *
      */
-    private static List<Employee> removeById(List<Employee> empList, int empId) {
+    public static List<Employee> removeById(List<Employee> empList, int empId) {
         //empList.remove(empId);
         for(int i = 0; i < empList.size(); i++){
             if(empList.get(i).id == empId){
@@ -76,10 +61,6 @@ public class Lists {
         return empList;
 
     }
-    
-    
-    
-    
     /**
      * This Will loop through the list and return false if no employee age is divisible by 2 
      * Return true if any employee name is divisible by 2
@@ -88,7 +69,7 @@ public class Lists {
      *
      *
      */
-    private static boolean ageModulus(List<Employee> empList) {
+    public static boolean ageModulus(List<Employee> empList) {
     	Employee adult = null;
         for(int i = 0; i < empList.size(); i++){
             if(empList.get(i).age % 2 == 0){

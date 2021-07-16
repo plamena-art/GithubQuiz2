@@ -1,14 +1,18 @@
 package com.goanna;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static java.util.Collections.emptyList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class ListsTest {
+
+    List<Employee> empList;
 	
 	@BeforeEach
 	void Initialize() {
@@ -18,21 +22,19 @@ class ListsTest {
         Employee emp4 = new Employee(4, "Mohit", 36);
         Employee emp5 = new Employee(5, "Swaraj", 60);
 
-        
-        List<Employee> empList = new ArrayList<>(10);
+        this.empList = new ArrayList<>(10);
 
         empList.add(emp1);
         empList.add(emp2);
         empList.add(emp3);
         empList.add(emp4);
         empList.add(emp5);
-
 	}
-
 
 	@Test
-	void test() {
-		
-	}
+    void Employeeover60() {
+	    Employee exp = Lists.over60(empList);
+	    assertEquals(exp, null);
+    }
 
 }
